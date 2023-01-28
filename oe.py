@@ -7,6 +7,8 @@ def main():
                      'CityFilterPReport?cityList=11726&remList=nad_p&dBegin=&dEnd=&allRem=false', verify=False)
     with open(f'files/{t}.html', 'bw') as f:
         f.write(r.content)
+    with open('files/last.html', 'bw') as f_last:
+        f_last.write(r.content)
 
 if __name__ == "__main__":
     main()
